@@ -1,31 +1,20 @@
 import type { Metadata } from "next";
-import { Cormorant, Montserrat } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant({
-  variable: "--font-cormorant",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
 });
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Business Airfare | First & Business Class Concierge",
-  description:
-    "Premium concierge for business and first class airline tickets. Live travel agents available 24/7 — bespoke itineraries for executives and discerning travelers worldwide.",
-  keywords: [
-    "business class flights",
-    "first class tickets",
-    "luxury travel concierge",
-    "corporate airfare",
-  ],
+  title: "Business Airfare",
+  description: "Premium business and first class travel concierge",
 };
 
 export default function RootLayout({
@@ -34,9 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
-        className={`${cormorant.variable} ${montserrat.variable} min-h-screen bg-[var(--color-background)] font-sans text-[var(--color-text)] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

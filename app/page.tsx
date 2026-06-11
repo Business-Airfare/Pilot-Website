@@ -1,29 +1,10 @@
-import { ContactBand } from "@/components/landing/ContactBand";
-import { Experience } from "@/components/landing/Experience";
-import { Footer } from "@/components/landing/Footer";
-import { Hero } from "@/components/landing/Hero";
-import { HowItWorks } from "@/components/landing/HowItWorks";
-import { Navbar } from "@/components/landing/Navbar";
-import { Services } from "@/components/landing/Services";
-import { StatsBand } from "@/components/landing/StatsBand";
-import { Testimonials } from "@/components/landing/Testimonials";
-import { TrustStrip } from "@/components/landing/TrustStrip";
-
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <TrustStrip />
-        <StatsBand />
-        <Services />
-        <HowItWorks />
-        <Experience />
-        <Testimonials />
-        <ContactBand />
-      </main>
-      <Footer />
-    </>
+    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <h1 className="text-4xl font-bold tracking-tight">Business Airfare</h1>
+      <p className="mt-4 text-lg text-neutral-600 dark:text-neutral-400">
+        Landing page — section-by-section build
+      </p>
+    </main>
   );
 }
